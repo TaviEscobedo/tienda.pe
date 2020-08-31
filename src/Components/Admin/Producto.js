@@ -8,7 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
  //const url="http://13.65.190.213:8000/api/products/products"; //api real
  const url="http://localhost:3000/products"; //api fake
 
- //const urlCtg="http://13.65.190.213:8000/api/products/categories"; //api real
+ // const urlCtg="http://13.65.190.213:8000/api/products/categories"; //api real
  const urlCtg="http://localhost:3000/categorias"; //api fake
 
 export default function Producto() {
@@ -23,7 +23,7 @@ export default function Producto() {
         description:'',
         price:0,
         discount:0,
-        // image:'',
+        image:'',
         is_active: false,
         category:0,
         tipoModal:''
@@ -35,7 +35,7 @@ export default function Producto() {
       const res = await fetch(urlCtg);
       const data= await res.json();
    //   console.table("datos",data)
-     // setCatg(data.results); //es para el url verdadero
+      //setCatg(data.results); //es para el url verdadero
      setCatg(data) //de mi api fake json server
     // console.table("categ en Component Productos:",data.results)
   }
@@ -44,15 +44,15 @@ export default function Producto() {
       
         const res = await fetch(url);
         const data= await res.json();
-     //   console.table("datos",data)
-       // setProductos(data.results); //es para el url verdadero
-       setProductos(data) //de mi api fake json server
+  
+      //  setProductos(data.results); //es para el url verdadero
+    setProductos(data) //de mi api fake json server
       // console.table("productos:",data.results)
     }
 
     const postProductos= async()=>{
         try{
-     const res=   await fetch(url,{
+     const res= await fetch(url,{
             method: 'POST',
             body: JSON.stringify(formu),
             headers: {
@@ -61,7 +61,7 @@ export default function Producto() {
             }
           })
      const formatoJson=await res.json();
-    // console.log(formatoJson);     
+     console.log(formatoJson);     
           getProductos();
           ModalInsertar();
         }catch(error){
@@ -86,7 +86,7 @@ const handleChange= async (e)=>{
         [e.target.name]: e.target.value 
     })
 
-   console.log("datos de handlechange",formu);
+  // console.log("datos de handlechange",formu);
 }
 
 const seleccionarProducto=(el)=>{
@@ -96,18 +96,19 @@ const seleccionarProducto=(el)=>{
         description:el.description,
         price:el.price,
         discount:el.discount,
-        // image:el.image,
+        image:el.image,
         is_active:el.is_active,
         category:el.category,
         tipoModal:'actualizar'
         
     })
-  
+  console.log('elemento seleccionado',formu.image);
   
 }
 const peticionPut= async()=>{
     try{
-        const res=   await fetch(url+"/"+formu.id,{
+      
+        const res= await fetch(url+"/"+formu.id,{
                method: 'PUT',
                body: JSON.stringify(formu),
                headers: {
@@ -181,8 +182,8 @@ const peticionDelete=()=>{
 
             </thead>
             <tbody>
-                { productos.map((el,i)=>(
-                    <tr key={i}>
+                { productos.map((el)=>(
+                    <tr key={el.id}>
                     {/* <td >{el.id}</td> */}
                     <td>{el.name}</td>
                     <td>{el.description}</td>
@@ -190,7 +191,7 @@ const peticionDelete=()=>{
                     <td>{el.discount}</td>
                     <td>{el.category}</td>
                     {/* <td>{el.image}</td> */}
-                    <td><img src={el.image} alt="" id="img-icon"/></td>
+                    <td><img src={el.image} alt={el.name} id="img-icon"/></td>
                     {(el.is_active)? <td>Activo</td> : <td>No activo</td>}
                     <td className="text-center" >
 
@@ -264,18 +265,22 @@ const peticionDelete=()=>{
                             }
                             
                           </select>
-                          {/* <input name="category" type="text" className="form-control"
-                           placeholder="Id de categoría" onChange={handleChange} value={formu?formu.category:0}/> */}
+                         
                         </div>
-                        {/* <div className="form-group col-md-6">
+                        <div className="form-group col-md-6">
                           
                           <label>Imagen</label>
                            
-                            <div class="custom-file">
-                                <input type="file" class="custom-file-input" id="customFile"/>
-                                <label class="custom-file-label" for="customFile">Elige una imagen</label>
+                            <div className="custom-file">
+                                <input type="file" className="custom-file-input" 
+                                name="image"
+                                onChange={(e)=>{setFormu({...formu,image:URL.createObjectURL(e.target.files[0])});console
+                              .log("imagen blob",URL.createObjectURL(e.target.files[0]))  } }
+                                // value={formu?formu.image:''}
+                                />
+                                <label className="custom-file-label" >Elige una imagen</label>
                               </div>
-                        </div> */}
+                        </div>
                       </div>
                     
                    

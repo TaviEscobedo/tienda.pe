@@ -22,18 +22,18 @@
       "tipoModal": "actualizar"
     },
     {
-      "tipoModal": "insertar",
-      "name": "Golosinas",
-      "description": "galletas, caramelos, chocolates",
-      "is_active": true,
-      "id": 11
+      "id": 12,
+      "name": "Limpieza",
+      "description": "Productos en general de limpeza, desinfectantes",
+      "is_active": false,
+      "tipoModal": "actualizar"
     },
     {
       "tipoModal": "insertar",
-      "name": "Limpieza",
-      "description": "Productos en general de limpeza, desinfectantes",
+      "name": "Golosinas",
+      "description": "Todo tipo de golosinas, galletas,caramelos",
       "is_active": true,
-      "id": 12
+      "id": 13
     }
   ],
   "proveedores": [
@@ -62,54 +62,48 @@
   ],
   "products": [
     {
-      "id": 1,
-      "name": "Arroz Costeño 1Kg",
-      "description": "Arroz blanco",
-      "price": "3.8",
-      "discount": "0.20",
-      "categorie": "Abarrotes",
+      "id": 10,
+      "name": "chocolate Sublime pequeño",
+      "description": "chocolate con algo de cacao",
+      "price": "1.4",
+      "discount": "0",
+      "image": "blob:http://localhost:3001/73ab4278-3dcb-452e-9456-c45f7a6b38a3",
       "is_active": true,
+      "category": "13",
       "tipoModal": "actualizar"
     },
     {
-      "tipoModal": "insertar",
-      "name": "Palta 1Kg",
-      "description": "Palta fuerte",
-      "price": "6.0",
+      "id": 11,
+      "name": "Arroz Costeño 1kg",
+      "description": "Arroz blanco graneado",
+      "price": "3.9",
       "discount": "0.1",
-      "categorie": "Frutas",
+      "image": "blob:http://localhost:3001/b6fa7763-075d-45e2-889f-05634c99cb7d",
       "is_active": true,
-      "id": 3
-    },
-    {
-      "id": 4,
-      "name": "Lejía Clorox 1L",
-      "description": "Lejía desinfectante ",
-      "price": "2.5",
-      "discount": "0.0",
-      "categorie": "Limpieza",
-      "is_active": true,
+      "category": "6",
       "tipoModal": "actualizar"
     },
     {
-      "tipoModal": "insertar",
-      "name": "Leche Gloria 1L bolsa",
-      "description": "Leche evaporada ",
-      "price": "4.5",
-      "discount": "0.2",
-      "categorie": "Abarrotes",
+      "id": 12,
+      "name": "Granadilla 1un",
+      "description": "Fruta de estación",
+      "price": "0.6",
+      "discount": "0",
+      "image": "blob:http://localhost:3001/bdb6d9d2-6903-41bd-8d8e-3380b39c6ce8",
       "is_active": true,
-      "id": 5
+      "category": "10",
+      "tipoModal": "actualizar"
     },
     {
-      "tipoModal": "insertar",
-      "category": "10",
-      "name": "Granadilla 1uni",
-      "description": "Granadilla de estación",
-      "price": "0.50",
-      "discount": "0.0",
+      "id": 13,
+      "name": "Leche Gloria 1L bolsa",
+      "description": "Leche",
+      "price": "4.99",
+      "discount": "0.1",
+      "image": "blob:http://localhost:3001/2190a35f-1cb5-4da5-9aec-d39fb63f0702",
       "is_active": true,
-      "id": 6
+      "category": "6",
+      "tipoModal": "actualizar"
     }
   ]
 }

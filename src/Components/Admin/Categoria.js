@@ -29,8 +29,8 @@ export default function Categoria() {
         const res = await fetch(url);
         const data= await res.json();
      //   console.table("datos",data)
-       // setCateg(data.results); //es para el url verdadero
-       setCateg(data) //de mi api fake json server
+      // setCateg(data.results); //es para el url verdadero
+       setCateg(data) ;//de mi api fake json server
     }
 
     const postCategorias= async()=>{
@@ -199,7 +199,7 @@ const peticionDelete=()=>{
    {/* </div> sirve para centrar la tabla */}
    <Modal isOpen={modalInsertar}>
                 <ModalHeader style={{display: 'block'}}>
-                <h5 className="modal-title">Ingresar datos de la categoría</h5>
+                <strong className="modal-title">Ingresar datos de la categoría</strong>
                   <span style={{float: 'right', cursor: 'pointer'}} onClick={()=>ModalInsertar()}
                   className="close"
                   >x</span>

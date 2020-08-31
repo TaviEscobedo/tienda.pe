@@ -14,10 +14,11 @@ export default function Home() {
       
         const res = await fetch(url);
         const data= await res.json();
-       //console.table("datos",data);
-     //  setCategoria(data.results); //es para el url verdadero
-       setCategoria(data) //de mi api fake json server
+    // console.table("datos",data);
+     // setCategoria(data.results); //es para el url verdadero
+          setCategoria(data) ;//de mi api fake json server
     }
+
     useEffect(() => {
  
         getCategorias();
@@ -32,9 +33,9 @@ export default function Home() {
             <div className="row  d-flex flex-row justify-content-center">
                
                {
-                   categoria.map((categ ,i) =>(
-                       (categ.is_active)?
-                      <CardCategoria name={categ.name}/>: <></>
+                   categoria.map((categ ) =>(
+                       (categ.is_active)&& <CardCategoria key={categ.id} name={categ.name} id={categ.id}/>
+                   
                    
                    ))
                }

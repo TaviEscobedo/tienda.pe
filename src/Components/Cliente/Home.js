@@ -9,7 +9,7 @@ const url="http://localhost:3000/categorias";  //api fake
 export default function Home() {
 
     const [categoria, setCategoria]=useState([]);
-
+    const [cartShop, setCartShop] = useState( localStorage.getItem("carrito")?JSON.parse(localStorage.getItem("carrito")):'');
     const getCategorias= async ()=>{
       
         const res = await fetch(url);
@@ -27,7 +27,7 @@ export default function Home() {
     },[])
     return (
         <div>
-            <NavBarBodega/>
+            <NavBarBodega cartShop={cartShop}/>
             <div className="container-fluid contenido">
 
             <div className="row  d-flex flex-row justify-content-center">

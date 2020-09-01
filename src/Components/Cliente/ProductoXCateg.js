@@ -8,9 +8,11 @@ import CardProducto from './CardProducto'
 //const url="http://127.0.0.1:8000/api/products/products?category=2"// real api
 export default function ProductoXCateg() {
 
+ 
     const [productos, setProductos]=useState([]);
-    const [cartShop, setCartShop] = useState([]);
-  //  console.log("url actual",window.location.pathname.split("/")[2]);
+    const [cartShop, setCartShop] = useState( localStorage.getItem("carrito")?JSON.parse(localStorage.getItem("carrito")):'');
+
+  
     const idCategoria=window.location.pathname.split("/")[2];
     // const url=`http://13.65.190.213:8000/api/products/products?category=${idCategoria}`//api real
    const url=`http://localhost:3000/products?categorias=${idCategoria}`
@@ -42,15 +44,21 @@ export default function ProductoXCateg() {
      
         setCartShop(products)
       //  console.log("cartShop",cartShop);
-        localStorage.setItem("carrito",JSON.stringify( products));
+       // localStorage.setItem("carrito",JSON.stringify( products));
         // let car=JSON.parse(localStorage.getItem("carrito"));
         // console.log("localsto",car);
 
     }
     useEffect(() => {
- 
-        getProductos();
+      // JSON.stringify({... JSON.parse(localStorage.getItem("carrito"))
       
+      localStorage.setItem("carrito", JSON.stringify(cartShop));
+      console.log("useEffectooo",cartShop)
+    }, )
+    useEffect(() => {
+      //setCartShop(JSON.parse(localStorage.getItem("carrito")));
+        getProductos();
+    
         
     },[])
     return (

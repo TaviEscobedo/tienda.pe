@@ -9,7 +9,7 @@ useEffect(() => {
   console.log("navBodega estado",cartShop);
 
   
-},[cartShop])
+},[])
     return (
       
     <nav className="navbar navbar-expand-lg navbar-light " >

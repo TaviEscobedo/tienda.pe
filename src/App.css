@@ -149,6 +149,11 @@ color: #282c34;
   border: 1px solid #cccbcb;
   border-radius: 8px;
   padding: 9px 10px;
+  margin-bottom: 1em;
 }
 
 /* fin componente .carrito */
+
+.img-prodCart{
+  width:100px;
+}

@@ -7,7 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 
 
- const url="http://localhost:3000/categorias";
+const url="http://localhost:3000/categorias";
 //const url="http://13.65.190.213:8000/api/products/categories" //api real
 
 export default function Categoria() {

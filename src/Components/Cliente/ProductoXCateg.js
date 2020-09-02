@@ -43,10 +43,7 @@ export default function ProductoXCateg() {
           }
      
         setCartShop(products)
-      //  console.log("cartShop",cartShop);
-       // localStorage.setItem("carrito",JSON.stringify( products));
-        // let car=JSON.parse(localStorage.getItem("carrito"));
-        // console.log("localsto",car);
+ 
 
     }
     useEffect(() => {
@@ -56,7 +53,7 @@ export default function ProductoXCateg() {
       console.log("useEffectooo",cartShop)
     }, )
     useEffect(() => {
-      //setCartShop(JSON.parse(localStorage.getItem("carrito")));
+     
         getProductos();
     
         

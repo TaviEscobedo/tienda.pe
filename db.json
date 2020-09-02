@@ -67,7 +67,7 @@
       "description": "chocolate con algo de cacao",
       "price": "1.4",
       "discount": "0",
-      "image": "blob:http://localhost:3001/73ab4278-3dcb-452e-9456-c45f7a6b38a3",
+      "image": "blob:http://localhost:3001/bb809f18-fa7b-4cdf-aeb2-ee2bf61e7e69",
       "is_active": true,
       "category": "13",
       "tipoModal": "actualizar"
@@ -78,7 +78,7 @@
       "description": "Arroz blanco graneado",
       "price": "3.9",
       "discount": "0.1",
-      "image": "blob:http://localhost:3001/b6fa7763-075d-45e2-889f-05634c99cb7d",
+      "image": "blob:http://localhost:3001/4380b332-acb2-438a-a21d-7fcb5af7b8ab",
       "is_active": true,
       "category": "6",
       "tipoModal": "actualizar"
@@ -89,7 +89,7 @@
       "description": "Fruta de estación",
       "price": "0.6",
       "discount": "0",
-      "image": "blob:http://localhost:3001/bdb6d9d2-6903-41bd-8d8e-3380b39c6ce8",
+      "image": "blob:http://localhost:3001/75db0694-d689-47ce-8b1a-715f7fb2b835",
       "is_active": true,
       "category": "10",
       "tipoModal": "actualizar"
@@ -100,7 +100,7 @@
       "description": "Leche",
       "price": "4.99",
       "discount": "0.1",
-      "image": "blob:http://localhost:3001/2190a35f-1cb5-4da5-9aec-d39fb63f0702",
+      "image": "blob:http://localhost:3001/d79e80c1-04ec-4993-8fc8-1f232b7ddd01",
       "is_active": true,
       "category": "6",
       "tipoModal": "actualizar"

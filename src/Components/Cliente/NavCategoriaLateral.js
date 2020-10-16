@@ -17,7 +17,7 @@ export default function NavCategoriaLateral() {
        // setCatg(data.results); //es para el url verdadero
        setCateg(data) //de mi api fake json server
       // console.table("categ en Component Productos:",data.results)
-      console.log(categ);
+     // console.log(categ);
     }
 
     useEffect(() => {

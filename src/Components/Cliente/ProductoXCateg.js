@@ -6,16 +6,17 @@ import CardProducto from './CardProducto'
 //const url="http://localhost:3000/products"; //api fake
 
 //const url="http://127.0.0.1:8000/api/products/products?category=2"// real api
-export default function ProductoXCateg() {
-
- 
+export default function ProductoXCateg({match}) {
+const _id=match.params.idCateg;
+//  console.log("props",typeof(_id));
     const [productos, setProductos]=useState([]);
     const [cartShop, setCartShop] = useState( localStorage.getItem("carrito")?JSON.parse(localStorage.getItem("carrito")):'');
 
-  
-    const idCategoria=window.location.pathname.split("/")[2];
+ 
+    // const idCategoria=window.location.pathname.split("/")[2];
+    // console.log("por location pathname",typeof(idCategoria));
     // const url=`http://13.65.190.213:8000/api/products/products?category=${idCategoria}`//api real
-   const url=`http://localhost:3000/products?categorias=${idCategoria}`
+   const url=`http://localhost:3000/products?category=${_id}`
     const getProductos= async ()=>{
       
         const res = await fetch(url);
@@ -50,7 +51,7 @@ export default function ProductoXCateg() {
       // JSON.stringify({... JSON.parse(localStorage.getItem("carrito"))
       
       localStorage.setItem("carrito", JSON.stringify(cartShop));
-      console.log("useEffectooo",cartShop)
+     // console.log("useEffectooo",cartShop)
     }, )
     useEffect(() => {
      

@@ -1,10 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import logo from '../logo.png'
 
 export default function NavBar() {
     return (
         <nav className="navbar  navbar-dark bg-dark pr-4">
-      <Link to="/" className="navbar-brand" id="loguito">  Bodeguita </Link>
+      <Link to="/" className="navbar-brand" id="loguito">   <img src={logo} alt="bodega.pe"  style={{height:"80px"}}/> </Link>
      
         <div className="dropdown" id="dropDown">
     

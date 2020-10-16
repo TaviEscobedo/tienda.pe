@@ -65,7 +65,7 @@
       "id": 10,
       "name": "chocolate Sublime pequeño",
       "description": "chocolate con algo de cacao",
-      "price": "1.4",
+      "price": "1.5",
       "discount": "0",
       "image": "blob:http://localhost:3001/bb809f18-fa7b-4cdf-aeb2-ee2bf61e7e69",
       "is_active": true,
@@ -77,21 +77,10 @@
       "name": "Arroz Costeño 1kg",
       "description": "Arroz blanco graneado",
       "price": "3.9",
-      "discount": "0.1",
+      "discount": "0",
       "image": "blob:http://localhost:3001/4380b332-acb2-438a-a21d-7fcb5af7b8ab",
       "is_active": true,
       "category": "6",
-      "tipoModal": "actualizar"
-    },
-    {
-      "id": 12,
-      "name": "Granadilla 1un",
-      "description": "Fruta de estación",
-      "price": "0.6",
-      "discount": "0",
-      "image": "blob:http://localhost:3001/75db0694-d689-47ce-8b1a-715f7fb2b835",
-      "is_active": true,
-      "category": "10",
       "tipoModal": "actualizar"
     },
     {
@@ -103,6 +92,26 @@
       "image": "blob:http://localhost:3001/d79e80c1-04ec-4993-8fc8-1f232b7ddd01",
       "is_active": true,
       "category": "6",
+      "tipoModal": "actualizar"
+    },
+    {
+      "id": 16,
+      "name": "Garbanzo",
+      "description": "1bolsa 1kg",
+      "price": "3.90",
+      "discount": "0",
+      "is_active": false,
+      "category": "6",
+      "tipoModal": "actualizar"
+    },
+    {
+      "id": 17,
+      "name": "Galleta soda",
+      "description": "1 pqt de 24 galletas",
+      "price": "1.00",
+      "discount": "0",
+      "is_active": true,
+      "category": "13",
       "tipoModal": "actualizar"
     }
   ]
